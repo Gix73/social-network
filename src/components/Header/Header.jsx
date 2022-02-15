@@ -3,10 +3,10 @@ import './../../App.css';
 import logo from './../../img/logo.png'
 import s from './Header.module.css'
 
-const Header = () => {
+const Header = (props) => {
     return (
         <header className={s.header}>
-            <img src={logo}></img>
+            <img src={logo} alt="logo"></img>
         </header>
     );
 }

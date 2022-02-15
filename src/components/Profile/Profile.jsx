@@ -4,9 +4,9 @@ import banner from './../../img/banner.webp';
 import MyPosts from './MyPosts/MyPosts';
 import s from './Profile.module.css'
 
-const Profile = () => {
+const Profile = (props) => {
     return (
-        <div className={s.content}>
+        <div>
             <div className={s.banner_wrapper}>
                 <img className={s.banner} src={banner} alt='banner'></img>
             </div>

@@ -1,24 +1,25 @@
 import React from 'react';
-import './../../App.css';
-import classes from './Navbar.module.css';
-
-const Navbar = () => {
+import { NavLink } from 'react-router-dom';
+// import './../../App.css';
+import s from './Navbar.module.css';
+// className={({ isActive }) => (isActive ? `${s.activeLink}` : "")} СТИЛИЗАЦИЯ АКТИВНОЙ ССЫЛКИ!!!!
+const Navbar = (props) => {
     return (
-        <nav className={classes.nav}>
-            <div className={classes.item}>
-                <a href='#'>Profile</a>
+        <nav className={s.nav}>
+            <div className={s.item}>
+                <NavLink to='/profile' className={({ isActive }) => (isActive ? `${s.activeLink}` : "")}>Profile</NavLink>
             </div>
-            <div className={classes.item}>
-                <a href='#'>Messages</a>
+            <div className={s.item}>
+                <NavLink to='/dialogs' className={({ isActive }) => (isActive ? `${s.activeLink}` : "")}>Messages</NavLink>
             </div>
-            <div className={classes.item}>
-                <a href='#'>News</a>
+            <div className={s.item}>
+                <NavLink to="/news" className={({ isActive }) => (isActive ? `${s.activeLink}` : "")}>News</NavLink>
             </div>
-            <div className={classes.item}>
-                <a href='#'>Music</a>
+            <div className={s.item}>
+                <NavLink to="/music" className={({ isActive }) => (isActive ? `${s.activeLink}` : "")}>Music</NavLink>
             </div>
-            <div className={classes.item}>
-                <a href='#'>Settings</a>
+            <div className={s.item}>
+                <NavLink to="/settings" className={({ isActive }) => (isActive ? `${s.activeLink}` : "")}>Settings</NavLink>
             </div>
         </nav>
     );
