@@ -1,6 +1,7 @@
 {
   "name": "social-network",
   "version": "0.1.0",
+  "homepage": "/profile",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
