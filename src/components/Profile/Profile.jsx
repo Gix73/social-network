@@ -1,19 +1,13 @@
 import React from 'react';
 import './../../App.css';
-import banner from './../../img/banner.webp';
 import MyPosts from './MyPosts/MyPosts';
 import s from './Profile.module.css'
+import ProfileInfo from './ProfileInfo/ProfileInfo';
 
 const Profile = (props) => {
     return (
         <div>
-            <div className={s.banner_wrapper}>
-                <img className={s.banner} src={banner} alt='banner'></img>
-            </div>
-            <div>
-                ava
-                description
-            </div>
+            <ProfileInfo />
             <MyPosts />
         </div >
     );
