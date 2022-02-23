@@ -13,11 +13,9 @@ function App(props) {
         <Navbar />
         <div className='app-wrapper-content'>
           <Routes>
-            <Route exact path='/dialogs' element={<Dialogs />} />
-            <Route path='/profile' element={<Profile />} />
+            <Route exact path='/dialogs' element={<Dialogs dialogs={props.dialogs} messages={props.messages} />} />
+            <Route path='/profile' element={<Profile posts={props.posts} />} />
           </Routes>
-          {/* <Profile />
-        <Dialogs /> */}
         </div>
       </div>
     </BrowserRouter>
