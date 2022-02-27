@@ -13,8 +13,16 @@ function App(props) {
         <Navbar />
         <div className='app-wrapper-content'>
           <Routes>
-            <Route exact path='/dialogs' element={<Dialogs dialogs={props.dialogs} messages={props.messages} />} />
-            <Route path='/profile' element={<Profile posts={props.posts} />} />
+            <Route exact path='/dialogs'
+              element={
+                <Dialogs state={props.appState.messagesPage} />
+              }
+            />
+            <Route path='/profile'
+              element={
+                <Profile state={props.appState.profilePage} />
+              }
+            />
           </Routes>
         </div>
       </div>
