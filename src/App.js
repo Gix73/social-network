@@ -22,7 +22,8 @@ function App(props) {
             <Route path='/profile'
               element={
                 <Profile state={props.appState.profilePage}
-                  addPost={props.addPost} />
+                  addPost={props.addPost}
+                  updateNewPostText={props.updateNewPostText} />
               }
             />
             <Route path='/music' element={<Music />} />
